@@ -2,3 +2,5 @@ node_modules/
 public/memes/
 package-lock.json"
 database.db"
+package-lock.json
+database.db
