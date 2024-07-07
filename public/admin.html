@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gestion des Propositions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Admin - Gestion des Propositions</h1>
+        <form id="admin-login-form">
+            <input type="password" id="admin-password" placeholder="Mot de passe admin" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <div id="admin-content" style="display:none;">
+            <h2>Propositions de Mèmes</h2>
+            <ul id="proposals-list"></ul>
+        </div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,23 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>meme viewer</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meme Viewer</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="container">
-<div class="meme-section">
-<div id="meme-container"></div>
-<button id="like-button">like</button>
-</div>
-<div class="comment-section">
-<textarea id="comment" placeholder="laissez un commentaire..."></textarea>
-<button id="submit-comment">soumettre</button>
-<div id="comments-list"></div>
-</div>
-</div>
-<script src="script.js"></script>
+    <div class="container">
+        <div class="content">
+            <div class="meme-section">
+                <div id="meme-author" class="author"></div>
+                <div id="meme-container"></div>
+                <button id="like-button">Like (<span id="like-count">0</span>)</button>
+            </div>
+            <div class="comment-section">
+                <textarea id="comment" placeholder="Laissez un commentaire..."></textarea>
+                <input type="text" id="comment-pseudo" placeholder="Votre nom (optionnel)">
+                <button id="submit-comment">Soumettre</button>
+                <div id="comments-list"></div>
+            </div>
+        </div>
+        <div class="propose-section">
+            <button id="propose-button">Proposer un mème</button>
+            <form id="propose-form" style="display:none;" enctype="multipart/form-data">
+                <input type="text" id="meme-pseudo" name="pseudo" placeholder="Votre pseudo (optionnel)">
+                <input type="file" id="meme" name="meme" accept="image/*,video/mp4" required>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
